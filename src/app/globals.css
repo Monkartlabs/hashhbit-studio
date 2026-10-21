@@ -1,0 +1,715 @@
+@import 'tailwindcss';
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+BRAND COLORS
+========================================================= */
+
+:root {
+/* -------------------------------------------------------
+Plum
+------------------------------------------------------- */
+
+--plum-50: #f6f1fa;
+--plum-100: #ebe1f3;
+--plum-200: #d7c4e7;
+--plum-300: #bc9dd3;
+--plum-400: #9c74ba;
+--plum-500: #7d5799;
+--plum-600: #65477f;
+--plum-700: #573a70;
+--plum-800: #4b2e63;
+--plum-900: #382249;
+--plum-950: #24142f;
+
+/* DEFAULT = plum-800 */
+--plum: #4b2e63;
+
+/* -------------------------------------------------------
+Lavender
+------------------------------------------------------- */
+
+--lavender-50: #f8f5fb;
+--lavender-100: #efe9f5;
+--lavender-200: #dcd0e8;
+--lavender-300: #b8a6c9;
+--lavender-400: #a08bb6;
+--lavender-500: #8873a0;
+--lavender-600: #705c88;
+--lavender-700: #5b4a70;
+--lavender-800: #483b59;
+--lavender-900: #362c43;
+--lavender-950: #231c2b;
+
+/* DEFAULT = lavender-300 */
+--lavender: #b8a6c9;
+
+/* -------------------------------------------------------
+Blush
+------------------------------------------------------- */
+
+--blush-50: #fdf4f7;
+--blush-100: #fbe6ee;
+--blush-200: #f7cfdf;
+--blush-300: #f0b0c8;
+--blush-400: #e68cae;
+--blush-500: #d66c94;
+--blush-600: #b9507a;
+
+/* -------------------------------------------------------
+Mint
+------------------------------------------------------- */
+
+--mint-50: #f1faf6;
+--mint-100: #ddf3e9;
+--mint-200: #bce6d3;
+--mint-300: #94d3b8;
+--mint-400: #6bbb9c;
+--mint-500: #4a9e80;
+--mint-600: #3a7f67;
+
+/* -------------------------------------------------------
+Peach
+------------------------------------------------------- */
+
+--peach-50: #fff6f0;
+--peach-100: #ffe9da;
+--peach-200: #fed3b7;
+--peach-300: #fbb78e;
+--peach-400: #f59b69;
+--peach-500: #e67f48;
+--peach-600: #c7642f;
+
+/* -------------------------------------------------------
+Sky
+------------------------------------------------------- */
+
+--sky-50: #f3f6fe;
+--sky-100: #e4ebfc;
+--sky-200: #c9d6f9;
+--sky-300: #a6bbf3;
+--sky-400: #839dea;
+--sky-500: #6580dc;
+--sky-600: #4c65bf;
+
+/* -------------------------------------------------------
+Existing semantic palette
+------------------------------------------------------- */
+
+--color-deep-purple: #4b2e63;
+--color-royal-purple: #65477f;
+--color-dusty-lavender: #b8a6c9;
+--color-light-lavender: #d9cee3;
+--color-warm-ivory: #f7f3ec;
+--color-champagne-beige: #e8ded2;
+--color-espresso: #282126;
+--color-muted-gold: #b69a68;
+--color-soft-taupe: #d8cec3;
+
+/* Semantic UI Tokens */
+--bg-primary: var(--color-warm-ivory);
+--bg-surface: var(--color-champagne-beige);
+--text-main: var(--color-espresso);
+--accent-primary: var(--color-deep-purple);
+--accent-secondary: var(--color-royal-purple);
+--accent-highlight: var(--color-muted-gold);
+--border-subtle: var(--color-soft-taupe);
+
+--card-glass: rgba(232, 222, 210, 0.65);
+--card-glass-border: rgba(184, 166, 201, 0.35);
+
+/* -------------------------------------------------------
+shadcn
+------------------------------------------------------- */
+
+--background: oklch(1 0 0);
+--foreground: oklch(0.147 0.004 49.3);
+
+--card: oklch(1 0 0);
+--card-foreground: oklch(0.147 0.004 49.3);
+
+--popover: oklch(1 0 0);
+--popover-foreground: oklch(0.147 0.004 49.3);
+
+--primary: oklch(0.214 0.009 43.1);
+--primary-foreground: oklch(0.986 0.002 67.8);
+
+--secondary: oklch(0.96 0.002 17.2);
+--secondary-foreground: oklch(0.214 0.009 43.1);
+
+--muted: oklch(0.96 0.002 17.2);
+--muted-foreground: oklch(0.547 0.021 43.1);
+
+--accent: oklch(0.96 0.002 17.2);
+--accent-foreground: oklch(0.214 0.009 43.1);
+
+--destructive: oklch(0.577 0.245 27.325);
+
+--border: oklch(0.922 0.005 34.3);
+--input: oklch(0.922 0.005 34.3);
+--ring: oklch(0.714 0.014 41.2);
+
+--chart-1: oklch(0.868 0.007 39.5);
+--chart-2: oklch(0.547 0.021 43.1);
+--chart-3: oklch(0.438 0.017 39.3);
+--chart-4: oklch(0.367 0.016 35.7);
+--chart-5: oklch(0.268 0.011 36.5);
+
+--radius: 0.625rem;
+
+--sidebar: oklch(0.986 0.002 67.8);
+--sidebar-foreground: oklch(0.147 0.004 49.3);
+--sidebar-primary: oklch(0.214 0.009 43.1);
+--sidebar-primary-foreground: oklch(0.986 0.002 67.8);
+--sidebar-accent: oklch(0.96 0.002 17.2);
+--sidebar-accent-foreground: oklch(0.214 0.009 43.1);
+--sidebar-border: oklch(0.922 0.005 34.3);
+--sidebar-ring: oklch(0.714 0.014 41.2);
+}
+
+/* =========================================================
+TAILWIND V4 THEME
+========================================================= */
+
+@theme inline {
+/* -------------------------------------------------------
+Plum
+------------------------------------------------------- */
+
+--color-plum-50: var(--plum-50);
+--color-plum-100: var(--plum-100);
+--color-plum-200: var(--plum-200);
+--color-plum-300: var(--plum-300);
+--color-plum-400: var(--plum-400);
+--color-plum-500: var(--plum-500);
+--color-plum-600: var(--plum-600);
+--color-plum-700: var(--plum-700);
+--color-plum-800: var(--plum-800);
+--color-plum-900: var(--plum-900);
+--color-plum-950: var(--plum-950);
+
+/* DEFAULT */
+--color-plum: var(--plum);
+
+/* -------------------------------------------------------
+Lavender
+------------------------------------------------------- */
+
+--color-lavender-50: var(--lavender-50);
+--color-lavender-100: var(--lavender-100);
+--color-lavender-200: var(--lavender-200);
+--color-lavender-300: var(--lavender-300);
+--color-lavender-400: var(--lavender-400);
+--color-lavender-500: var(--lavender-500);
+--color-lavender-600: var(--lavender-600);
+--color-lavender-700: var(--lavender-700);
+--color-lavender-800: var(--lavender-800);
+--color-lavender-900: var(--lavender-900);
+--color-lavender-950: var(--lavender-950);
+
+/* DEFAULT */
+--color-lavender: var(--lavender);
+
+/* -------------------------------------------------------
+Blush
+------------------------------------------------------- */
+
+--color-blush-50: var(--blush-50);
+--color-blush-100: var(--blush-100);
+--color-blush-200: var(--blush-200);
+--color-blush-300: var(--blush-300);
+--color-blush-400: var(--blush-400);
+--color-blush-500: var(--blush-500);
+--color-blush-600: var(--blush-600);
+
+/* -------------------------------------------------------
+Mint
+------------------------------------------------------- */
+
+--color-mint-50: var(--mint-50);
+--color-mint-100: var(--mint-100);
+--color-mint-200: var(--mint-200);
+--color-mint-300: var(--mint-300);
+--color-mint-400: var(--mint-400);
+--color-mint-500: var(--mint-500);
+--color-mint-600: var(--mint-600);
+
+/* -------------------------------------------------------
+Peach
+------------------------------------------------------- */
+
+--color-peach-50: var(--peach-50);
+--color-peach-100: var(--peach-100);
+--color-peach-200: var(--peach-200);
+--color-peach-300: var(--peach-300);
+--color-peach-400: var(--peach-400);
+--color-peach-500: var(--peach-500);
+--color-peach-600: var(--peach-600);
+
+/* -------------------------------------------------------
+Sky
+------------------------------------------------------- */
+
+--color-sky-50: var(--sky-50);
+--color-sky-100: var(--sky-100);
+--color-sky-200: var(--sky-200);
+--color-sky-300: var(--sky-300);
+--color-sky-400: var(--sky-400);
+--color-sky-500: var(--sky-500);
+--color-sky-600: var(--sky-600);
+
+/* -------------------------------------------------------
+Existing semantic colors
+------------------------------------------------------- */
+
+--color-deep-purple: var(--color-deep-purple);
+--color-royal-purple: var(--color-royal-purple);
+--color-dusty-lavender: var(--color-dusty-lavender);
+--color-light-lavender: var(--color-light-lavender);
+--color-warm-ivory: var(--color-warm-ivory);
+--color-champagne: var(--color-champagne-beige);
+--color-espresso: var(--color-espresso);
+--color-muted-gold: var(--color-muted-gold);
+--color-soft-taupe: var(--color-soft-taupe);
+
+/* -------------------------------------------------------
+Fonts
+------------------------------------------------------- */
+
+--font-sans: var(--font-poppins), ui-sans-serif, sans-serif;
+--font-display: var(--font-raleway), ui-sans-serif, sans-serif;
+
+--font-poppins: var(--font-poppins);
+--font-raleway: var(--font-raleway);
+
+--font-sora: var(--font-sora);
+--font-inter: var(--font-inter);
+
+--font-bingo-regular: var(--font-bingo-regular);
+--font-bingo-italic: var(--font-bingo-italic);
+
+--font-mono: var(--font-mono);
+
+/* -------------------------------------------------------
+Animations
+------------------------------------------------------- */
+
+--animate-marquee-left: marquee-left 45s linear infinite;
+--animate-float: float 14s ease-in-out infinite;
+
+/* -------------------------------------------------------
+Shadow
+------------------------------------------------------- */
+
+--shadow-soft: 0 30px 80px -30px rgba(75, 46, 99, 0.25);
+
+/* -------------------------------------------------------
+Transition
+------------------------------------------------------- */
+
+--ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================================
+KEYFRAMES
+========================================================= */
+
+@keyframes marquee-left {
+0% {
+transform: translateX(0);
+}
+
+100% {
+transform: translateX(-50%);
+}
+}
+
+@keyframes float {
+0%,
+100% {
+transform: translate3d(0, 0, 0);
+}
+
+50% {
+transform: translate3d(24px, -32px, 0);
+}
+}
+
+@keyframes pulseGlow {
+0%,
+100% {
+opacity: 0.4;
+transform: scale(1);
+}
+
+50% {
+opacity: 0.7;
+transform: scale(1.05);
+}
+}
+
+@keyframes shimmer {
+0% {
+background-position: 200% center;
+}
+
+50% {
+background-position: 0% center;
+}
+
+100% {
+background-position: 200% center;
+}
+}
+
+@keyframes scroll-up {
+from {
+transform: translateY(0);
+}
+
+to {
+transform: translateY(-50%);
+}
+}
+
+@keyframes scroll-down {
+from {
+transform: translateY(-50%);
+}
+
+to {
+transform: translateY(0);
+}
+}
+
+@keyframes imageScrollUp {
+from {
+transform: translateY(0);
+}
+
+to {
+transform: translateY(-50%);
+}
+}
+
+@keyframes imageScrollDown {
+from {
+transform: translateY(-50%);
+}
+
+to {
+transform: translateY(0);
+}
+}
+
+/* =========================================================
+DARK MODE
+========================================================= */
+
+.dark {
+--background: oklch(0.147 0.004 49.3);
+--foreground: oklch(0.986 0.002 67.8);
+
+--card: oklch(0.214 0.009 43.1);
+--card-foreground: oklch(0.986 0.002 67.8);
+
+--popover: oklch(0.214 0.009 43.1);
+--popover-foreground: oklch(0.986 0.002 67.8);
+
+--primary: oklch(0.922 0.005 34.3);
+--primary-foreground: oklch(0.214 0.009 43.1);
+
+--secondary: oklch(0.268 0.011 36.5);
+--secondary-foreground: oklch(0.986 0.002 67.8);
+
+--muted: oklch(0.268 0.011 36.5);
+--muted-foreground: oklch(0.714 0.014 41.2);
+
+--accent: oklch(0.268 0.011 36.5);
+--accent-foreground: oklch(0.986 0.002 67.8);
+
+--destructive: oklch(0.704 0.191 22.216);
+
+--border: oklch(1 0 0 / 10%);
+--input: oklch(1 0 0 / 15%);
+--ring: oklch(0.547 0.021 43.1);
+
+--chart-1: oklch(0.868 0.007 39.5);
+--chart-2: oklch(0.547 0.021 43.1);
+--chart-3: oklch(0.438 0.017 39.3);
+--chart-4: oklch(0.367 0.016 35.7);
+--chart-5: oklch(0.268 0.011 36.5);
+
+--sidebar: oklch(0.214 0.009 43.1);
+--sidebar-foreground: oklch(0.986 0.002 67.8);
+--sidebar-primary: oklch(0.488 0.243 264.376);
+--sidebar-primary-foreground: oklch(0.986 0.002 67.8);
+--sidebar-accent: oklch(0.268 0.011 36.5);
+--sidebar-accent-foreground: oklch(0.986 0.002 67.8);
+--sidebar-border: oklch(1 0 0 / 10%);
+--sidebar-ring: oklch(0.547 0.021 43.1);
+}
+
+/* =========================================================
+SHADCN THEME TOKENS
+========================================================= */
+
+@theme inline {
+--color-sidebar-ring: var(--sidebar-ring);
+--color-sidebar-border: var(--sidebar-border);
+--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+--color-sidebar-accent: var(--sidebar-accent);
+--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+--color-sidebar-primary: var(--sidebar-primary);
+--color-sidebar-foreground: var(--sidebar-foreground);
+--color-sidebar: var(--sidebar);
+
+--color-chart-5: var(--chart-5);
+--color-chart-4: var(--chart-4);
+--color-chart-3: var(--chart-3);
+--color-chart-2: var(--chart-2);
+--color-chart-1: var(--chart-1);
+
+--color-ring: var(--ring);
+--color-input: var(--input);
+--color-border: var(--border);
+--color-destructive: var(--destructive);
+
+--color-accent-foreground: var(--accent-foreground);
+--color-accent: var(--accent);
+
+--color-muted-foreground: var(--muted-foreground);
+--color-muted: var(--muted);
+
+--color-secondary-foreground: var(--secondary-foreground);
+--color-secondary: var(--secondary);
+
+--color-primary-foreground: var(--primary-foreground);
+--color-primary: var(--primary);
+
+--color-popover-foreground: var(--popover-foreground);
+--color-popover: var(--popover);
+
+--color-card-foreground: var(--card-foreground);
+--color-card: var(--card);
+
+--color-foreground: var(--foreground);
+--color-background: var(--background);
+
+--radius-sm: calc(var(--radius) * 0.6);
+--radius-md: calc(var(--radius) * 0.8);
+--radius-lg: var(--radius);
+--radius-xl: calc(var(--radius) * 1.4);
+--radius-2xl: calc(var(--radius) * 1.8);
+--radius-3xl: calc(var(--radius) * 2.2);
+--radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* =========================================================
+BASE
+========================================================= */
+
+@layer base {
+* {
+@apply border-border outline-ring/50;
+}
+
+body {
+@apply bg-background text-foreground;
+}
+}
+
+/* =========================================================
+LUXURY GLASS
+========================================================= */
+
+.glass-panel {
+background: rgba(247, 243, 236, 0.72);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid rgba(184, 166, 201, 0.35);
+}
+
+.glass-card {
+background: rgba(232, 222, 210, 0.6);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(217, 206, 227, 0.6);
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+background: rgba(247, 243, 236, 0.9);
+border-color: rgba(101, 71, 127, 0.4);
+transform: translateY(-4px);
+box-shadow: 0 20px 40px -15px rgba(75, 46, 99, 0.12);
+}
+
+.glass-card-dark {
+background: rgba(40, 33, 38, 0.92);
+backdrop-filter: blur(16px);
+border: 1px solid rgba(182, 154, 104, 0.25);
+color: #f7f3ec;
+}
+
+/* =========================================================
+GLOW
+========================================================= */
+
+.glow-purple {
+box-shadow: 0 0 35px -5px rgba(101, 71, 127, 0.25);
+}
+
+.glow-gold {
+box-shadow: 0 0 30px -5px rgba(182, 154, 104, 0.3);
+}
+
+/* =========================================================
+GRADIENT TEXT
+========================================================= */
+
+.text-gradient-purple {
+background: linear-gradient(
+135deg,
+#4b2e63 0%,
+#65477f 50%,
+#b69a68 100%
+);
+
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+}
+
+.text-gradient-gold {
+background: linear-gradient(
+135deg,
+#282126 0%,
+#65477f 60%,
+#b69a68 100%
+);
+
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+}
+
+/* =========================================================
+BACKGROUND UTILITIES
+========================================================= */
+
+.bg-grid-subtle {
+background-size: 40px 40px;
+
+background-image:
+linear-gradient(
+to right,
+rgba(184, 166, 201, 0.12) 1px,
+transparent 1px
+),
+linear-gradient(
+to bottom,
+rgba(184, 166, 201, 0.12) 1px,
+transparent 1px
+);
+}
+
+.bg-radial-aura {
+background: radial-gradient(
+circle at 50% 30%,
+rgba(217, 206, 227, 0.45) 0%,
+rgba(247, 243, 236, 0) 70%
+);
+}
+
+/* =========================================================
+CUSTOM SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: #f7f3ec;
+}
+
+::-webkit-scrollbar-thumb {
+background: #b8a6c9;
+border-radius: 9999px;
+border: 2px solid #f7f3ec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #65477f;
+}
+
+/* =========================================================
+CURSOR FOLLOWER
+========================================================= */
+
+.cursor-blob {
+pointer-events: none;
+position: fixed;
+border-radius: 50%;
+filter: blur(40px);
+z-index: 1;
+
+transition:
+transform 0.15s ease-out,
+width 0.2s,
+height 0.2s,
+opacity 0.2s;
+}
+
+/* =========================================================
+ANIMATION UTILITIES
+========================================================= */
+
+.animate-float-slow {
+animation: float 7s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+animation: float 8s ease-in-out infinite 3s;
+}
+
+.animate-pulse-glow {
+animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* =========================================================
+IMAGE SCROLL
+========================================================= */
+
+.image-scroll-track {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+width: 100%;
+will-change: transform;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+.image-scroll-track-up {
+animation-name: imageScrollUp;
+}
+
+.image-scroll-track-down {
+animation-name: imageScrollDown;
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+.image-scroll-track {
+animation: none;
+}
+}
