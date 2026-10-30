@@ -8,7 +8,7 @@ const SITE_URL = "https://hashhbitstudio.com";
 
 export const blogData = [
   {
-    id: 1,
+    id: "ai-driven-automation-b2b-operations-2026",
     title: "How AI-Driven Automation is Redefining B2B Operations in 2026",
     tags: ["AI", "Automation", "B2B"],
     image: "/images/blog/01.avif",
@@ -52,7 +52,7 @@ export const blogData = [
     ],
   },
   {
-    id: 2,
+    id: "modern-brand-identity-beyond-logo",
     title: "Why Modern Brand Identity Requires More Than Just a Logo",
     tags: ["Branding", "Design", "Marketing"],
     image: "/images/blog/02.avif",
@@ -96,7 +96,7 @@ export const blogData = [
     ],
   },
   {
-    id: 3,
+    id: "react-vs-nextjs-high-growth-saas-products",
     title:
       "React vs. Next.js: Choosing the Right Framework for High-Growth SaaS Products",
     tags: ["React", "Next.js", "SaaS"],
@@ -141,7 +141,7 @@ export const blogData = [
     ],
   },
   {
-    id: 4,
+    id: "high-converting-b2b-saas-landing-page",
     title: "The Anatomy of a High-Converting B2B SaaS Landing Page",
     tags: ["SaaS", "UI/UX", "Conversion"],
     image: "/images/blog/04.avif",

@@ -27,7 +27,7 @@ export default function TrustStats() {
   return (
     <section
       aria-label="Our impact and capabilities"
-      className="w-full h-[230px] md:h-[280px] overflow-hidden bg-[#faf8ff] text-white"
+      className="w-full h-[230px] md:h-[280px] pt-3 md:pt-5 overflow-hidden bg-[#faf8ff] text-white"
     >
       {/* Section heading */}
       <div className="mt-5 mb-5 flex items-center justify-between px-5 sm:px-8 lg:px-12">

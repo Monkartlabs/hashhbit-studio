@@ -23,16 +23,21 @@ const reasons = [
 
 const ChooseUsSection = () => {
   return (
-    <section className="px-5 py-20 sm:px-10 sm:py-28 lg:px-20 lg:py-32">
+    <section className="px-5 py-12 sm:px-10 sm:py-14 lg:px-20 lg:py-18">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="mb-5 font-sora-regular text-[16px] font-black uppercase text-[#17113d]">
               Why Choose us
             </p>
 
-            <h2 className="font-sora font-semibold text-4xl leading-tight sm:text-5xl lg:text-6xl">
+            <h2 className="font-sora font-semibold text-4xl leading-tight sm:text-5xl lg:text-6xl bg-gradient-to-r
+from-[#17113D]
+via-[#4e3aa8]
+to-[#4c3895]
+bg-clip-text
+text-transparent">
               Good people. <br />
-              <span className="text-[#6246e5] font-bold">Thoughtful work.</span>
+              Thoughtful work.
             </h2>
 
             <p className="mt-6 max-w-xl font-inter text-base leading-8 text-[#17113d]/70">
@@ -78,7 +83,7 @@ const ChooseUsSection = () => {
           <div className="why-image-wrap relative min-w-0">
 
             <img
-              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+              src="/images/l1.jpg"
               alt="A team sharing ideas and working through a project together"
               loading="lazy"
               className="why-image relative z-10 h-[390px] w-full rounded-[2rem] object-cover sm:h-[520px] lg:h-[650px]"

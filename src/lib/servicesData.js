@@ -1,67 +1,67 @@
 export const servicesData = [
   {
-    id: "brand-and-creative",
-    title: "Brand and Creative",
+    id: "digital-marketing-and-branding",
+    title: "Digital Marketing & Branding",
     briefDescription:
-      "We build distinctive brands through strategic thinking, compelling visuals, and creative storytelling. From brand identity to campaign development, we help businesses communicate their values, stand out in competitive markets, and create meaningful connections with their audiences.",
+      "We build distinctive brands and grow businesses through strategic branding, data-driven digital marketing, compelling visuals, and creative storytelling. From brand identity and digital campaigns to social media management, search engine optimization, and online advertising, we help businesses strengthen their digital presence, reach the right audience, increase engagement, and create meaningful connections with their customers.",
     image: "/images/services/service_01/01.avif",
     subPoints: [
       {
         title: "Brand Strategy & Positioning",
         description:
-          "We define your brand's purpose, values, audience, and market positioning to establish a clear identity that differentiates your business and builds lasting recognition.",
+          "We define your brand's purpose, values, target audience, and market positioning to establish a clear identity that differentiates your business, strengthens recognition, and builds lasting customer trust.",
         image: "/images/services/service_01/02.jpg",
       },
       {
         title: "Visual Identity Design",
         description:
-          "We create distinctive logos, color palettes, typography, and visual systems that express your brand personality and maintain consistency across every touchpoint.",
+          "We create distinctive logos, color palettes, typography, and visual systems that express your brand personality and maintain consistency across websites, social media, marketing materials, and every customer touchpoint.",
         image: "/images/services/service_01/03.avif",
       },
       {
-        title: "Creative Campaigns & Storytelling",
+        title: "Digital Marketing Strategy",
         description:
-          "We develop compelling creative concepts, campaign visuals, and brand narratives that capture attention, communicate your message, and connect with your target audience.",
+          "We develop customized digital marketing strategies that align with your business objectives and audience needs. Through the right combination of digital channels, targeted campaigns, and performance insights, we help increase brand awareness, attract potential customers, and drive sustainable growth.",
         image: "/images/services/service_01/04.avif",
       },
       {
-        title: "Brand Guidelines & Communication",
+        title: "Social Media Marketing",
         description:
-          "We establish practical brand guidelines and communication systems that keep your messaging, visual identity, and brand experience consistent across digital and offline channels.",
+          "We create engaging social media content, strategic posting plans, and audience-focused campaigns that strengthen your online presence. From creative visuals to community engagement, we help your brand connect with its audience, increase visibility, and build a loyal digital community.",
         image: "/images/services/service_01/05.avif",
       },
     ],
   },
 
   {
-    id: "ui-ux-digital-experience",
+    id: "ui-ux-and-digital-experience",
     title: "UI/UX & Digital Experience",
     briefDescription:
-      "We design intuitive, engaging digital experiences that combine user needs with business objectives. From research and interaction design to polished interfaces, we create accessible, user-centered experiences that make digital products easier to navigate, more enjoyable to use, and more effective.",
+      "We create intuitive, engaging, and visually compelling digital experiences that connect businesses with their audiences. From user interface design and user experience research to website design, mobile app interfaces, and interactive prototypes, we focus on building digital products that are easy to navigate, visually consistent, and aligned with user needs. Our approach combines creativity, functionality, and user-centered design to improve engagement, strengthen customer satisfaction, and deliver meaningful digital experiences that support business growth.",
     image: "/images/services/service_02/01.avif",
     subPoints: [
       {
-        title: "User Research & Experience Strategy",
+        title: "UI Design & Visual Identity",
         description:
-          "We study user behavior, audience expectations, and business goals to uncover opportunities and define experience strategies that solve real problems.",
+          "We design modern, visually appealing user interfaces that reflect your brand identity and create a consistent digital presence. Through thoughtful typography, color systems, layouts, icons, and visual elements, we ensure every screen communicates clearly, enhances usability, and delivers an engaging experience across digital platforms.",
         image: "/images/services/service_02/02.avif",
       },
       {
-        title: "Wireframing & Interactive Prototyping",
+        title: "UX Research & Strategy",
         description:
-          "We map user journeys, structure information, and develop interactive prototypes to validate ideas and refine product experiences before development begins.",
+          "We understand your users, their behaviors, needs, and challenges through research, user analysis, and experience mapping. By identifying pain points and uncovering opportunities for improvement, we develop user-centered strategies that simplify interactions, improve accessibility, and align digital experiences with your business objectives.",
         image: "/images/services/service_02/03.avif",
       },
       {
-        title: "Website & App Interface Design",
+        title: "Website & Mobile App Design",
         description:
-          "We design modern interfaces with thoughtful layouts, typography, visual hierarchy, and responsive components that reflect your brand and support effortless interactions.",
+          "We create responsive website designs and intuitive mobile application interfaces that deliver seamless experiences across devices and screen sizes. From information architecture and navigation systems to interactive elements and page layouts, we focus on making digital products accessible, engaging, and easy to use while maintaining visual consistency and functionality.",
         image: "/images/services/service_02/04.avif",
       },
       {
-        title: "Usability & Experience Optimization",
+        title: "Wireframing, Prototyping & Usability Testing",
         description:
-          "We improve navigation, accessibility, conversion paths, and interaction patterns to reduce friction and help users achieve their goals more efficiently.",
+          "We transform ideas into structured wireframes and interactive prototypes that visualize user journeys before development begins. Through usability testing, user feedback, and experience analysis, we identify challenges, validate concepts, refine interactions, and optimize digital experiences to improve accessibility, user satisfaction, engagement, and conversion rates.",
         image: "/images/services/service_02/05.avif",
       },
     ],

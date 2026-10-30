@@ -15,19 +15,22 @@ const leftFeatures = [
   {
     number: "01",
     title: "One Connected Team",
-    description: "Strategy, design, engineering, and marketing working synchronously under one roof. Zero handoff friction.",
+    description:
+      "Strategy, design, engineering, and marketing working synchronously under one roof. Zero handoff friction.",
     icon: TrendingUp,
   },
   {
     number: "02",
     title: "Business-First Mindset",
-    description: "We optimize for commercial ROI, revenue growth, and operational efficiency—not just pretty code or art files.",
+    description:
+      "We optimize for commercial ROI, revenue growth, and operational efficiency—not just pretty code or art files.",
     icon: SlidersHorizontal,
   },
   {
     number: "03",
     title: "Creative + Technical Edge",
-    description: "World-class aesthetics backed by elite software engineering capability and modern tech stacks.",
+    description:
+      "World-class aesthetics backed by elite software engineering capability and modern tech stacks.",
     icon: Users,
   },
 ];
@@ -36,13 +39,15 @@ const rightFeatures = [
   {
     number: "04",
     title: "Data-Driven Decisions",
-    description: "Every design choice, code architecture decision, and ad dollar spent is backed by research and analytics",
+    description:
+      "Every design choice, code architecture decision, and ad dollar spent is backed by research and analytics",
     icon: MessagesSquare,
   },
   {
     number: "05",
     title: "Architected for Scale",
-    description: "Built from day one to handle high user concurrency, heavy data loads, and future product expansions",
+    description:
+      "Built from day one to handle high user concurrency, heavy data loads, and future product expansions",
     icon: Wallet,
   },
   {
@@ -70,25 +75,29 @@ const columnTwoImages = [
 
 export function WhyChooseUs() {
   return (
-    <section id="choose-us" className="relative overflow-hidden bg-[#FAF8FF] px-6 text-ivory md:px-12 lg:px-20 -mt-10 ">
-      <div className="relative mx-auto max-w-7xl">
-        <div className="relative max-w-2xl md:-left-10 ">
-          <div className="inline-flex items-center font-sora gap-2 px-4 py-2 text-[16px] font-bold uppercase text-[#17113d] mb-5">
+    <section
+      id="choose-us"
+      className="relative overflow-hidden bg-[#FAF8FF] text-ivory "
+    >
+      <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-18">
+        <div className="relative max-w-7xl ">
+          <div className="flex-col items-center font-sora gap-2 text-[16px] font-bold uppercase text-[#17113d]">
             THE HASHHBIT ADVANTAGE
           </div>
 
           <h2
-            className=" mt-1 mb-5 inline-block whitespace-nowrap text-[clamp(1.6rem,5vw,4rem)] font-semibold font-sora leading-[0.95] tracking-[-0.04em] bg-gradient-to-r from-[#17113D] via-[#6246E5] to-[#B8A5FF] bg-clip-text text-transparent drop-shadow-[0_8px_30px_rgba(147,112,190,0.18)] pb-3
-"
+            className="mt-5 sm:mt-8 inline-block  text-[clamp(1.5rem,5vw,3.5rem)] font-semibold 4e3aa8-sora leading-[1.08] tracking-[-0.03em] bg-gradient-to-r from-[#17113D]
+via-[#4e3aa8]
+to-[#4c3895] bg-clip-text text-transparent drop-shadow-[0_8px_30px_rgba(147,112,190,0.18)]"
           >
             Why Ambitious Companies
             <br />
-            <span className=" mt-1 inline-block font-sora">Build With Us</span>
+            Build with us
           </h2>
         </div>
 
         <div
-          className="relative mt-16 flex flex-col gap-10 lg:mt-25 lg:grid lg:grid-cols-[320px_1fr_320px] lg:gap-8
+          className="relative mt-10 flex flex-col gap-10 lg:mt-30 lg:grid lg:grid-cols-[320px_1fr_320px] lg:gap-8
           "
         >
           {/* LEFT CARDS — 01, 02, 03 */}

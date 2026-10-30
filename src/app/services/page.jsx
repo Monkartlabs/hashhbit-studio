@@ -38,11 +38,9 @@ export default function BlogPage() {
             </span>
           </div>
 
-          <h1 className="font-sora text-4xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
+          <h1 className="font-sora text-4xl font-bold tracking-tight sm:text-7xl lg:text-8xl bg-gradient-to-r from-[#17113D] via-[#4e3aa8] to-[#4c3895] bg-clip-text text-transparent">
             Our{" "}
-            <span className="bg-gradient-to-r from-[#6246e5] to-[#a18bff] bg-clip-text text-transparent">
               Services
-            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl font-inter text-[15px] leading-8 text-gray-600 sm:text-[20px]">
@@ -54,16 +52,18 @@ export default function BlogPage() {
 
       {/* SECTION 2: SLIDING SERVICE CARDS */}
       <section className="relative bg-gradient-to-b from-white via-[#faf8ff] to-white px-5 py-12 sm:px-10 sm:py-16 lg:px-16">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-8xl">
           {/* Section heading and slider controls */}
           <div className="mb-9 flex items-end justify-between gap-5 sm:mb-12">
             <div>
-              <p className="mb-5 font-sora text-[14px] font-bold uppercase tracking-[0.2em] text-[#6246e5]">
+              <p className="mb-8 font-sora text-[14px] font-bold uppercase tracking-[0.2em] text-[#111111]">
                 Explore What We Offer
               </p>
 
-              <h2 className="font-sora text-2xl font-bold tracking-tight sm:text-5xl">
-                Solutions Made for You
+              <h2 className=" font-sora leading-7 sm:leading-12 text-[clamp(1.8rem,5vw,3rem)] font-bold tracking-tight bg-gradient-to-r from-[#17113D] via-[#4e3aa8] to-[#4c3895] bg-clip-text text-transparent">
+                Solutions Made 
+                < br/>
+                for You
               </h2>
 
               <p className="mt-3 max-w-xl font-inter text-sm leading-6 text-gray-700 sm:text-[18px]">
@@ -210,7 +210,7 @@ export default function BlogPage() {
       </section>
 
       {/* REST OF THE PAGE: UNCHANGED */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
 
       {/* Local animation — no external CSS required */}

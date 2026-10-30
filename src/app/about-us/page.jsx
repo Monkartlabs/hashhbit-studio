@@ -34,7 +34,7 @@ const values = [
     secondParagraph:
       "We value honest relationships, thoughtful collaboration, and the courage to keep improving. For us, success is not just about what we build, but the positive impact we create along the way.",
     image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+      "/images/l1.jpg",
     alt: "Team members working together in a collaborative office",
   },
   {
@@ -47,7 +47,7 @@ const values = [
     secondParagraph:
       "From the first conversation to the final delivery, we focus on creating solutions that work in the real world. We want our partnerships to grow stronger, our work to create lasting value, and every project to move our clients forward.",
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85",
+      "/images/l1.jpg",
     alt: "Colleagues discussing ideas around a table",
   },
 ];
@@ -112,10 +112,10 @@ export default function AboutPage() {
   values.find((value) => value.id === activeValue) || values[0];
 
   return (
-    <main className="about-page overflow-hidden bg-[#FAF8FF] text-[#17113d]">
+    <main className="about-page overflow-hidden bg-[#FAF8FF] text-[#17113d] ">
         <Navbar />
       {/* 1. HERO SECTION */}
-      <section className="relative px-5 pb-20 pt-24 sm:px-10 sm:pb-28 sm:pt-32 lg:px-20 lg:pb-36 lg:pt-40">
+      <section className="relative px-5 pb-20 pt-24 sm:px-10 sm:pb-28 sm:pt-32 lg:px-20 lg:pb-36 lg:pt-40 ">
         <div className="about-glow pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-[#B8A5ff]/30 blur-[100px]" />
 
         <div className="relative mx-auto max-w-7xl">
@@ -125,13 +125,15 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <h1 className="max-w-5xl font-sora font-semibold text-4xl leading-[1.1] tracking-tighter animate-fade-up sm:text-5xl md:text-7xl lg:text-8xl">
+          <h1 className="max-w-5xl font-sora font-semibold text-4xl leading-[1.1] tracking-tighter animate-fade-up sm:text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r
+from-[#17113D]
+via-[#4e3aa8]
+to-[#4c3895]
+bg-clip-text
+text-transparent">
             We turn big ideas into{" "}
             <br />
-            <span className="uppercase relative inline-block text-[#6246e5]">
-              meaningful
-            </span>{" "}
-            impact.
+              meaningful impact.
           </h1>
 
           <div className="mt-8 flex flex-col gap-8 sm:mt-12 sm:flex-row sm:items-end sm:justify-between">
@@ -152,7 +154,7 @@ export default function AboutPage() {
 
           <div className="relative mt-16 overflow-hidden rounded-[2rem] sm:mt-20 sm:rounded-[2.5rem]">
             <img
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2000&q=90"
+              src="/images/about-us.avif"
               alt="A bright, modern workspace designed for collaboration"
               className="h-[280px] w-full object-cover sm:h-[400px] lg:h-[530px]"
             />
@@ -181,9 +183,15 @@ export default function AboutPage() {
               Who we are
             </p>
 
-            <h2 className="font-sora font-semibold text-4xl sm:text-5xl lg:text-6xl">
-              A company built around{" "}
-              <span className="text-[#6246e5] uppercase">possibility.</span>
+            <h2 className="font-sora font-semibold text-4xl sm:text-5xl lg:text-6xl bg-gradient-to-r
+from-[#17113D]
+via-[#4e3aa8]
+to-[#4c3895]
+bg-clip-text
+text-transparent">
+              We built around{" "}
+              < br/>
+              possibility
             </h2>
 
             <p className="mt-7 font-inter text-base leading-8 text-[#17113d]/70 sm:text-lg">
@@ -212,7 +220,8 @@ export default function AboutPage() {
             {/* <div className="absolute -left-5 -top-5 h-28 w-28 rounded-3xl bg-[#B8A5ff]/35 sm:-left-7 sm:-top-7" /> */}
 
             <img
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85"
+            //   src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85"
+            src={"/images/who_we_are.avif"}
               alt="A collaborative work environment"
               className="relative z-10 h-[360px] w-full rounded-[2rem] object-cover sm:h-[470px]"
             />
@@ -230,7 +239,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. TRUSTED PARTNERS MARQUEE */}
-      <section className="overflow-hidden border-y border-[#17113d]/10 py-14 sm:py-16">
+      {/* <section className="overflow-hidden border-y border-[#17113d]/10 py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-5 text-center sm:px-10">
           <p className="font-sora text-xs font-bold uppercase tracking-[0.24em] text-[#6246e5]">
             Trusted partnerships
@@ -279,19 +288,24 @@ export default function AboutPage() {
     }
   `}</style>
 </div>
-      </section>
+      </section> */}
 
       {/* 4. OUR BELIEFS & PURPOSE */}
       <section className="px-5 py-20 sm:px-10 sm:py-28 lg:px-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl sm:mb-16">
-            <p className="mb-4 font-sora text-[14px] font-bold uppercase tracking-[0.20em] text-[#6246e5]">
+            <p className="mb-4 pl-1 font-sora text-[14px] font-bold uppercase tracking-[0.20em] text-[#6246e5]">
               What drives us
             </p>
-            <h2 className="font-sora font-semibold text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              The things we{" "}
+            <h2 className="font-sora font-semibold text-4xl leading-tight sm:text-5xl lg:text-6xl bg-gradient-to-r
+from-[#17113D]
+via-[#4e3aa8]
+to-[#4c3895]
+bg-clip-text
+text-transparent">
+              The things We
               <br/>
-              <span className="text-[#6246e5] font-black uppercase">stand for.</span>
+              stand for.
             </h2>
           </div>
 

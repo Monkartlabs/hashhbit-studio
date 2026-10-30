@@ -98,17 +98,12 @@ export function EnterpriseSolutions() {
       className="
         relative flex w-full min-h-screen items-center
         overflow-hidden bg-[#FAF8FF]
-        px-5 py-16
         text-[#17113D]
-        sm:px-8 sm:py-20
-        md:px-12
-        lg:px-16 lg:py-24
-        xl:px-20
       "
     >
       <Backdrop />
 
-      <div className="relative mx-auto w-full max-w-[1240px]">
+      <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-18">
         {/* ---------------------------------------------------------- */}
         {/* HEADER                                                       */}
         {/* ---------------------------------------------------------- */}
@@ -119,7 +114,7 @@ export function EnterpriseSolutions() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="max-w-[640px]"
+            className=""
           >
             <motion.p
               variants={fadeUp}
@@ -133,8 +128,8 @@ export function EnterpriseSolutions() {
               className="
                 mt-5
                 font-sora
-                text-[32px]
-                font-semibold
+                text-[clamp(1.5rem,4vw,3.50rem)]
+                font-bold
                 leading-[1.08]
                 tracking-[-0.03em]
                 bg-gradient-to-r
@@ -143,18 +138,12 @@ via-[#4e3aa8]
 to-[#4c3895]
 bg-clip-text
 text-transparent
-                min-[400px]:text-[36px]
-                sm:mt-6
-                sm:text-[44px]
-                lg:text-[52px]
-                xl:text-[58px]
+                sm:mt-8
               "
             >
               {/* Technology That Solves Core Business{" "}
               <span className="text-[#6246E5]">Bottlenecks.</span> */}
-              Technology That Solves Core Business
-              <br />
-              Bottlenecks
+              Technology That Solves Core Business Bottlenecks
             </motion.h2>
 
             <motion.p

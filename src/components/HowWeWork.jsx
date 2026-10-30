@@ -181,22 +181,17 @@ export function HowWeWork() {
         className="
           relative flex w-full min-h-screen items-center
           overflow-hidden bg-[#FAF8FF]
-          px-5 py-16
           text-[#17113D]
-          sm:px-8 sm:py-20
-          md:px-12
-          lg:px-16 lg:py-24
-          xl:px-20
         "
       >
         <Backdrop />
 
-        <div className="relative mx-auto w-full max-w-[1320px]">
+        <div className="relative container mx-auto px-4 md:px-6 pt-4 md:pt-6 lg:pt-10 pb-8 md:pb-12 lg:pb-18">
           {/* -------------------------------------------------------- */}
           {/* HEADER                                                     */}
           {/* -------------------------------------------------------- */}
 
-          <div className="relative">
+          <div className="relative ">
             <motion.div
               variants={headerContainer}
               initial="hidden"
@@ -235,7 +230,7 @@ text-transparent
               >
                 {/* From Concept to <br className="hidden sm:block" />
                 <span className="text-[#6246E5]">Commercial Scale.</span> */}
-                From Concept to 
+                From Concept to
                 <br />
                 Commercial Scale
               </motion.h2>
@@ -315,10 +310,7 @@ text-transparent
               </li>
 
               {phases.map((phase, i) => (
-                <li
-                  key={phase}
-                  className="flex items-center gap-3 sm:gap-4"
-                >
+                <li key={phase} className="flex items-center gap-3 sm:gap-4">
                   <span
                     className={`
                       font-sora text-[10px] font-semibold uppercase
@@ -413,12 +405,14 @@ function StepCard({ step, index, total, isActive, onSelect }) {
   return (
     <motion.li
       variants={cardVariants}
-      whileHover={{ y: -6,
+      whileHover={{
+        y: -6,
         scale: 1.02,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut",
-       }}}
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+        },
+      }}
       onClick={onSelect}
       // earlier cards sit above later ones so the number badge that
       // straddles the card edge (xl) is never covered by its neighbour
@@ -438,10 +432,10 @@ function StepCard({ step, index, total, isActive, onSelect }) {
         lg:w-[340px]
         xl:w-auto
         ${
-  isActive
-    ? "border-[#6246E5]/50 shadow-[0_24px_50px_-20px_rgba(98,70,229,0.45)]"
-    : "border-[#17113D]/10 shadow-[0_10px_30px_-22px_rgba(98,70,229,0.25)] hover:border-[#6246E5]/50 hover:shadow-[0_24px_45px_-18px_rgba(98,70,229,0.35)]"
-}
+          isActive
+            ? "border-[#6246E5]/50 shadow-[0_24px_50px_-20px_rgba(98,70,229,0.45)]"
+            : "border-[#17113D]/10 shadow-[0_10px_30px_-22px_rgba(98,70,229,0.25)] hover:border-[#6246E5]/50 hover:shadow-[0_24px_45px_-18px_rgba(98,70,229,0.35)]"
+        }
       `}
     >
       {/* Icon · connector line · number badge */}
@@ -479,9 +473,7 @@ function StepCard({ step, index, total, isActive, onSelect }) {
         </span>
 
         {/* Number badge – centred on the card border from xl up (card padding is 24px) */}
-        <span
-          className="relative z-10 flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full bg-[#FAF8FF] xl:-mr-[41px]"
-        >
+        <span className="relative z-10 flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full bg-[#FAF8FF] xl:-mr-[41px]">
           <span
             className={`
               absolute inset-0 rounded-full border transition-colors duration-500

@@ -29,15 +29,6 @@ import {
   Zap,
 } from "lucide-react";
 
-/* ------------------------------------------------------------------ */
-/* COLORS                                                             */
-/* bg #FAF8FF · soft #B8A5FF · accent #6246E5 · ink #17113D           */
-/* ------------------------------------------------------------------ */
-
-/* ------------------------------------------------------------------ */
-/* CONTENT                                                            */
-/* ------------------------------------------------------------------ */
-
 // Icon used for each capability label. Unknown labels fall back to Sparkles.
 const capabilityIcons = {
   "Brand Strategy": PenTool,
@@ -207,19 +198,14 @@ export function CaseStudies() {
       <section
         id="case-studies"
         className="
-          relative flex w-full h-[300vh] md:h-full items-center
+          relative flex items-center
           overflow-hidden bg-[#FAF8FF]
-          px-5 py-16
           text-[#17113D]
-          sm:px-8 sm:py-20
-          md:px-12
-          lg:px-16 lg:py-24
-          xl:px-20
         "
       >
         <Backdrop />
 
-        <div className="relative mx-auto w-full max-w-[1320px]">
+        <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-18">
           {/* -------------------------------------------------------- */}
           {/* HEADER                                                     */}
           {/* -------------------------------------------------------- */}
@@ -243,8 +229,8 @@ export function CaseStudies() {
               className="
                 mt-5
                 font-sora
-                text-[32px]
-                font-semibold
+                text-[clamp(1.5rem,4vw,3.50rem)]
+                font-bold
                 leading-[1.08]
                 tracking-[-0.03em]
                 bg-gradient-to-r
@@ -253,11 +239,7 @@ via-[#4e3aa8]
 to-[#4c3895]
 bg-clip-text
 text-transparent
-                min-[400px]:text-[36px]
-                sm:mt-6
-                sm:text-[44px]
-                lg:text-[52px]
-                xl:text-[58px]
+                sm:mt-8
               "
             >
               {/* Ideas We’ve Turned Into{" "}
@@ -428,11 +410,7 @@ text-transparent
             {/* ====================================================== */}
 
             <div className="relative min-w-0 bg-white/70">
-              <AnimatePresence
-                mode="popLayout"
-                initial={false}
-                custom={dir}
-              >
+              <AnimatePresence mode="popLayout" initial={false} custom={dir}>
                 <motion.div
                   key={study.id}
                   custom={dir}
@@ -579,7 +557,9 @@ function SliderButton({ direction, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      aria-label={direction === "prev" ? "Previous case study" : "Next case study"}
+      aria-label={
+        direction === "prev" ? "Previous case study" : "Next case study"
+      }
       className="
         group flex h-9 w-9 shrink-0 items-center justify-center
         rounded-full border border-white/30

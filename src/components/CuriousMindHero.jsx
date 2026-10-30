@@ -1,13 +1,14 @@
 
 "use client";
+import { motion } from "framer-motion";
 
 export default function CuriousMindHero() {
   return (
-    <main className="relative -mt-30 overflow-hidden bg-[#FAF8FF] text-[#24133D]">
+    <main className="relative overflow-hidden bg-[#FAF8FF] text-[#24133D] py-4 md:py-8">
       {/* Perspective Grid */}
-      <div className="absolute inset-0 [perspective:900px]">
+      <div className="absolute inset-0 w-full h-full ">
         <div
-          className="absolute inset-[-35%] opacity-50"
+          className="absolute inset-[-35%] opacity-60"
           style={{
             backgroundImage: `
               linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
@@ -27,7 +28,7 @@ export default function CuriousMindHero() {
       <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] max-w-none rounded-full bg-fuchsia-200/30 blur-[100px]" />
 
       {/* Hero */}
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-24 sm:px-6 sm:py-20">
+      <section className="relative z-10 flex h-full items-center justify-center ">
         <div className="flex w-full max-w-full flex-col items-center">
           {/* Main Heading */}
           <h1 className="w-full text-center text-[clamp(42px,8.5vw,135px)] leading-[0.95] tracking-[-0.075em] sm:text-[clamp(60px,10vw,135px)]">
@@ -57,131 +58,106 @@ export default function CuriousMindHero() {
 
           {/* CTA */}
           <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:flex-wrap">
-            {/* Primary CTA */}
-            <a
-              href="/contact"
-              className="
-                group relative flex h-14 w-full max-w-[260px] shrink-0
-                items-center overflow-hidden rounded-full pr-2
-                border border-violet-300
-                bg-white/60
-                shadow-[0_8px_30px_rgba(109,40,217,0.08)]
-                backdrop-blur-md
-                transition-all duration-500
-                hover:scale-[1.035]
-                hover:border-violet-400
-                hover:bg-white/80
-                hover:shadow-[0_12px_45px_rgba(109,40,217,0.18)]
-                active:scale-[0.98]
-              "
-            >
-              {/* Animated Circle */}
-              <span
-                className="
-                  absolute left-1 top-1/2
-                  h-12 w-12 -translate-y-1/2
-                  rounded-full
-                  bg-gradient-to-br from-[#17113D] via-[#6246E5] to-[#B8A5FF]
-                  shadow-[0_0_20px_rgba(139,92,246,0.3)]
-                  transition-all duration-[1500ms]
-                  ease-[cubic-bezier(.16,1,.3,1)]
-                  group-hover:left-[calc(100%-52px)]
-                  group-hover:from-violet-400
-                  group-hover:to-fuchsia-400
-                "
-              />
-
-              {/* CTA Text */}
-              <span
-                className="
-                  relative z-10 ml-12 pl-1
-                  whitespace-nowrap text-[13px]
-                  tracking-[0.12em] text-[#17113D]
-                  transition-all duration-500
-                  group-hover:-translate-x-3
-                  font-inter font-bold
-                "
-              >
-                START A PROJECT
-              </span>
-
-              {/* Animated Arrow */}
-              <span
-                className="
-                  relative z-10 ml-2 flex h-7 w-7
-                  items-center justify-center
-                  overflow-hidden text-lg text-violet-700
-                  transition-colors duration-500
-                  group-hover:text-violet-950
-                "
-              >
-                <span
-                  className="
-                    transition-transform duration-500 ease-out
-                    group-hover:translate-x-7
-                    group-hover:-translate-y-7
-                  "
-                >
-                  ↗
-                </span>
-
-                <span
-                  className="
-                    absolute -translate-x-7 translate-y-7
-                    transition-transform duration-500 ease-out
-                    group-hover:translate-x-0
-                    group-hover:translate-y-0
-                  "
-                >
-                  ↗
-                </span>
-              </span>
-            </a>
+            
 
             {/* Secondary CTA */}
-            <a
-              href="/contact#consultation"
-              className="
-                inline-flex min-h-14 w-full max-w-[320px]
-                items-center justify-center gap-3
-                rounded-full border border-violet-300
-                bg-transparent px-4 py-3
-                font-inter text-[12px] font-bold tracking-wide
-                text-[#17113D]
-                transition-all duration-300
-                hover:border-violet-400
-                hover:bg-white/60
-                active:scale-[0.98]
-                sm:w-auto sm:max-w-none sm:px-6 sm:text-[13px]
-              "
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="h-4 w-4 shrink-0"
-                aria-hidden="true"
-              >
-                <rect
-                  x="3"
-                  y="5"
-                  width="18"
-                  height="16"
-                  rx="2"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                />
-                <path
-                  d="M16 3v4M8 3v4M3 10h18"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
-              </svg>
+            <motion.a
+  href="/contact#consultation"
+  initial="rest"
+  animate="rest"
+  whileHover="hover"
+  whileTap={{ scale: 0.97 }}
+  variants={{
+    rest: { y: 0 },
+    hover: { y: -3 },
+  }}
+  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+  className="
+    group relative isolate inline-flex min-h-14 w-full max-w-[320px]
+    items-center justify-center gap-3 overflow-hidden
+    rounded-full border border-violet-300
+    bg-white/50 px-4 py-3
+    font-inter text-[12px] font-bold tracking-wide
+    text-[#17113D] shadow-[0_4px_20px_rgba(139,92,246,0.08)]
+    transition-[border-color,box-shadow,background-color] duration-300
+    hover:border-violet-400 hover:bg-white/90
+    hover:shadow-[0_10px_35px_rgba(139,92,246,0.22)]
+    sm:w-auto sm:max-w-none sm:px-6 sm:text-[13px]
+  "
+>
+  {/* Animated shine */}
+  <motion.span
+    aria-hidden="true"
+    variants={{
+      rest: { x: "-150%", opacity: 0 },
+      hover: { x: "150%", opacity: 1 },
+    }}
+    transition={{ duration: 0.8, ease: "easeInOut" }}
+    className="
+      pointer-events-none absolute inset-y-0 left-0 z-[-1]
+      w-1/2 -skew-x-12
+      bg-gradient-to-r from-transparent via-violet-200/70 to-transparent
+    "
+  />
 
-              <span className="whitespace-nowrap">
-                Book a Strategy Consultation
-              </span>
-            </a>
+  {/* Soft ambient glow */}
+  <motion.span
+    aria-hidden="true"
+    variants={{
+      rest: { opacity: 0, scale: 0.85 },
+      hover: { opacity: 1, scale: 1.15 },
+    }}
+    transition={{ duration: 0.3 }}
+    className="
+      pointer-events-none absolute inset-0 -z-10 rounded-full
+      bg-gradient-to-r from-violet-100/50 via-white/70 to-purple-100/50
+    "
+  />
+
+  <motion.svg
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+    className="h-4 w-4 shrink-0"
+    variants={{
+      rest: { rotate: 0, scale: 1 },
+      hover: { rotate: -6, scale: 1.12 },
+    }}
+    transition={{ type: "spring", stiffness: 350, damping: 12 }}
+  >
+    <rect
+      x="3"
+      y="5"
+      width="18"
+      height="16"
+      rx="2"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    />
+    <path
+      d="M16 3v4M8 3v4M3 10h18"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+  </motion.svg>
+
+  <span className="relative whitespace-nowrap">
+    Book a Strategy Consultation
+  </span>
+
+  <motion.span
+    aria-hidden="true"
+    variants={{
+      rest: { x: 0, opacity: 0.5 },
+      hover: { x: 4, opacity: 1 },
+    }}
+    transition={{ type: "spring", stiffness: 300, damping: 15 }}
+    className="text-violet-600"
+  >
+    →
+  </motion.span>
+</motion.a>
           </div>
         </div>
       </section>

@@ -14,48 +14,53 @@ import EnterpriseSolutions from "@/components/SolutionsSection";
 import CaseStudies from "@/components/CaseStudiesSection";
 import HowWeWork from "@/components/HowWeWork";
 import TrustStats from "@/components/TrustStats";
+import HomePage from "@/components/HomePage";
 
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen text-[#282126] selection:bg-[#B8A6C9] selection:text-[#282126]">
-      {/* Background Interactive Kinetic Canvas with mouse particle reactions */}
-      {/* <InteractiveCanvas /> */}
+    // <main className="relative min-h-screen text-[#282126] selection:bg-[#B8A6C9] selection:text-[#282126]">
+    //   {/* Background Interactive Kinetic Canvas with mouse particle reactions */}
+    //   {/* <InteractiveCanvas /> */}
 
-      {/* Optional overlay */}
-      <div className="fixed inset-0 bg-[#F7F3EC]/60 -z-10" />
+    //   {/* Optional overlay */}
+    //   <div className="fixed inset-0 bg-[#F7F3EC]/60 -z-10" />
 
-      {/* Smooth Magnetic Custom Cursor */}
-      <CustomCursor />
+    //   {/* Smooth Magnetic Custom Cursor */}
+    //   <CustomCursor />
 
-      {/* Top Left Navigation Header */}
-      <Navbar />
+    //   {/* Top Left Navigation Header */}
+    //   <Navbar />
 
-      {/* Hero Section */}
-      <HeroSection />
-      <TrustStats />
+    //   {/* Hero Section */}
+    //   <HeroSection />
+    //   <TrustStats />
 
 
-      <AboutUs />
-      {/* {Service} */}
-      <ServicesVisualMatrix />
-      <EnterpriseSolutions />
-      {/* Visual Work Reel & Proof of Scale */}
-      <WhyChooseUs />
-      <CaseStudies />
-      <CuriousMindHero />
-      <HowWeWork />
+    //   <AboutUs />
+    //   {/* {Service} */}
+    //   <ServicesVisualMatrix />
+    //   <EnterpriseSolutions />
+    //   {/* Visual Work Reel & Proof of Scale */}
+    //   <WhyChooseUs />
+    //   <CaseStudies />
+    //   <CuriousMindHero />
+    //   <HowWeWork />
 
-      {/* Modern Tech Stack & Modular Architecture Visualizer */}
-      {/* <TechStackVisualizer /> */}
+    //   {/* Modern Tech Stack & Modular Architecture Visualizer */}
+    //   {/* <TechStackVisualizer /> */}
 
-      {/* Interactive Scope & Project Configurator */}
-      {/* <InteractiveProjectEstimator /> */}
+    //   {/* Interactive Scope & Project Configurator */}
+    //   {/* <InteractiveProjectEstimator /> */}
 
-      <Testimonials />
-      <Blogs />
-      <Footer />
+    //   {/* <Testimonials /> */}
+    //   <Blogs />
+    //   <Footer />
       
-    </main>
+    // </main>
+
+    <>
+    <HomePage />
+    </>
   );
 }

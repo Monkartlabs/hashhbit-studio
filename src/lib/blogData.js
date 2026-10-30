@@ -1,6 +1,6 @@
 export const blogData = [
   {
-    id: 1,
+    id: "ai-driven-automation-b2b-operations-2026",
     title: "How AI-Driven Automation is Redefining B2B Operations in 2026",
     tags: ["AI", "Marketing", "Technology"],
     image:
@@ -34,7 +34,7 @@ export const blogData = [
     ],
   },
   {
-    id: 2,
+    id: "modern-brand-identity-beyond-logo",
     title: "Why Modern Brand Identity Requires More Than Just a Logo",
     tags: ["3D Animation", "Creative", "Branding"],
     image:
@@ -68,7 +68,7 @@ export const blogData = [
     ],
   },
   {
-    id: 3,
+    id: "react-vs-nextjs-high-growth-saas-products",
     title: "React vs. Next.js: Choosing the Right Framework for High-Growth SaaS Products",
     tags: ["UI/UX", "Design", "Product"],
     image:
@@ -102,7 +102,7 @@ export const blogData = [
     ],
   },
   {
-    id: 4,
+    id: "high-converting-b2b-saas-landing-page",
     title: "The Anatomy of a High-Converting B2B SaaS Landing Page",
     tags: ["UI/UX", "Design", "Product"],
     image:

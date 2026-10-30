@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 
 /* =========================================================
@@ -271,34 +271,7 @@ export default function Footer() {
           <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             {/* YouTube */}
             <SocialIcon href="#">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
-                <path d="M10 15L15 12L10 9V15Z" fill="currentColor" />
-
-                <path
-                  d="
-                    M21 12
-                    C21 12 21 16.5 20.4 18.2
-                    C20.1 19.1 19.4 19.8 18.5 20.1
-                    C16.8 20.7 12 20.7 12 20.7
-                    C12 20.7 7.2 20.7 5.5 20.1
-                    C4.6 19.8 3.9 19.1 3.6 18.2
-                    C3 16.5 3 12 3 12
-                    C3 12 3 7.5 3.6 5.8
-                    C3.9 4.9 4.6 4.2 5.5 3.9
-                    C7.2 3.3 12 3.3 12 3.3
-                    C12 3.3 16.8 3.3 18.5 3.9
-                    C19.4 4.2 20.1 4.9 20.4 5.8
-                    C21 7.5 21 12 21 12Z
-                  "
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </svg>
-            </SocialIcon>
-
-            {/* substack */}
-            <SocialIcon href="#">
-              <SiSubstack size={18} color="#ffffff" />
+              <FaFacebook className="text-[35px]" />
             </SocialIcon>
 
             <SocialIcon href="#">
@@ -312,7 +285,10 @@ export default function Footer() {
 
             {/* Instagram */}
             <SocialIcon href="#">
-              <FaInstagram size={18} color="#ffffff" />
+              <FaInstagram
+  size={18}
+  className="text-white transition-all hover:scale-110 hover:text-pink-400"
+/>
             </SocialIcon>
           </div>
         </div>
@@ -362,7 +338,7 @@ export default function Footer() {
               <RotateText>Work</RotateText>
             </Link>
 
-            <Link
+            {/* <Link
               href="/industry"
               className="
                 group
@@ -371,20 +347,20 @@ export default function Footer() {
               "
             >
               <RotateText>Industries</RotateText>
-            </Link>
+            </Link> */}
 
             <Link
-              href="/insights"
+              href="/blog"
               className="
                 group
                 w-fit
                 footer-link
               "
             >
-              <RotateText>Insights</RotateText>
+              <RotateText>Blogs</RotateText>
             </Link>
 
-            <Link
+            {/* <Link
               href="/careers"
               className="
                 group
@@ -393,7 +369,7 @@ export default function Footer() {
               "
             >
               <RotateText>Careers</RotateText>
-            </Link>
+            </Link> */}
 
             <Link
               href="/contact"
@@ -419,11 +395,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-3">
             <Link
-              href="/services/brand-and-creative"
+              href="/services/digital-marketing-and-branding"
               className="group flex font-sora"
             >
               <RotateText className="text-[#ffffff]/80">
-                Brand Strategy
+                Digital Marketing &
+                Branding
               </RotateText>
             </Link>
 
@@ -493,7 +470,7 @@ export default function Footer() {
 
             <div>
               <div className="group inline-flex font-sora font-semibold">
-                <RotateText className="text-[#ffffff]/80">Email Us</RotateText>
+                <RotateText className="text-[#ffffff]">Email Us</RotateText>
               </div>
 
               <a
@@ -533,6 +510,39 @@ export default function Footer() {
                   "
                 >
                   🇮🇳 +91 9665622497
+                </a>
+
+                {/* <a
+                  href="tel:+14034023414"
+                  className="
+                    group
+                    w-fit
+                    footer-link
+                  "
+                >
+                  🇨🇦 +1 (403) 404-4053
+                </a> */}
+              </div>
+            </div>
+
+            <div>
+              <div className="group inline-flex font-sora font-semibold">
+                <RotateText className="">Find Us</RotateText>
+              </div>
+
+              <div className="mt-3 flex flex-col gap-3">
+                <a
+                  href="tel:+919625995855"
+                  className="
+                    group
+                    w-fit
+                    footer-link
+                    text-white/80
+                  "
+                >
+                  Office No. 127, 1501, Sai Chowk Rd, 
+                  <br />
+                  Laxman Nagar, Balewadi, Pune Maharashtra 411045
                 </a>
 
                 {/* <a

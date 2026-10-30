@@ -122,18 +122,16 @@ while (start < indexed.length) {
         <div className="relative mx-auto max-w-7xl">
           <div className="animate-service-detail text-center">
             <div className="mb-6 inline-flex items-center gap-3 px-4 py-2">
-              <span className="font-bingo-regular text-[16px] font-black uppercase tracking-[0.2em] text-[#6246e5]">
+              <span className="font-bingo-regular text-[16px] font-black uppercase tracking-[0.2em] text-[#111111]">
                 Our Expertise
               </span>
             </div>
 
             <h1 className="mx-auto max-w-4xl font-poppins text-4xl tracking-tight sm:text-6xl lg:text-7xl">
-                <span className="text-8xl font-bold uppercase">
-
-              {service.title}
-                </span>
-
-              <span className="mt-5 font-bold block text-[#6246e5]">
+                <span className="text-[clamp(1.5rem,5vw,3.5rem)] font-bold uppercase bg-gradient-to-r from-[#17113D] via-[#4e3aa8] to-[#4c3895] bg-clip-text text-transparent">
+  {service.title}
+</span>
+              <span className="mt-5 text-[clamp(1rem,5vw,3rem)] font-bold block text-[#4e3aa8]">
                 Made With Purpose.
               </span>
             </h1>
@@ -158,12 +156,12 @@ while (start < indexed.length) {
           {/* Left: text */}
           <div className="animate-service-detail">
             <div className="mb-5 flex items-center gap-3">
-              <span className="font-bingo-regular text-[16px] font-black uppercase tracking-[0.1em] text-[#6246e5]">
+              <span className="font-bingo-regular text-[16px] font-black uppercase tracking-[0.1em] text-[#111111]">
                 About This Service
               </span>
             </div>
 
-            <h2 className="font-poppins text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="font-poppins text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-[#17113D] via-[#4e3aa8] to-[#4c3895] bg-clip-text text-transparent">
               {service.title}
             </h2>
 
@@ -209,13 +207,14 @@ while (start < indexed.length) {
       <section className="bg-[#faf8ff] px-5 py-16 sm:px-10 sm:py-24 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center sm:mb-16">
-            <span className="font-bingo-regular text-[14px] font-bold uppercase tracking-[0.19em] text-[#6246e5]">
+            <span className="font-bingo-regular text-[14px] font-bold uppercase tracking-[0.19em] text-[#111111]">
               What We Bring to the Table
             </span>
 
-            <h2 className="mx-auto mt-4 max-w-3xl font-poppins text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              A Closer Look at Our{" "}
-              <span className="text-[#6246e5]">Approach</span>
+            <h2 className="mx-auto mt-4 max-w-3xl font-poppins text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-[#17113D] via-[#4e3aa8] to-[#4c3895] bg-clip-text text-transparent">
+              A Closer Look at Our
+              < br />
+              Approach
             </h2>
           </div>
 

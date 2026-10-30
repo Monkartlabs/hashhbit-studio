@@ -1,14 +1,7 @@
-
 import { blogData } from "../lib/blogData";
 import React, { useMemo, useRef, useState } from "react";
 
-const categories = [
-  "All",
-  "Branding",
-  "Technology",
-  "AI",
-  "Growth Marketing",
-];
+const categories = ["All", "Branding", "Technology", "AI", "Growth Marketing"];
 
 function ArrowIcon1() {
   return (
@@ -35,7 +28,7 @@ function ArrowIcon1() {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function ArrowIcon({ direction = "right" }) {
@@ -108,7 +101,9 @@ const Blogs = () => {
     if (activeCategory === "All") return blogData;
 
     const normalize = (value) =>
-      String(value).toLowerCase().replace(/[^a-z0-9]/g, "");
+      String(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
 
     return blogData.filter((blog) => {
       const values = [
@@ -118,7 +113,7 @@ const Blogs = () => {
       ].filter(Boolean);
 
       return values.some((value) =>
-        normalize(value).includes(normalize(activeCategory))
+        normalize(value).includes(normalize(activeCategory)),
       );
     });
   }, [activeCategory]);
@@ -129,7 +124,7 @@ const Blogs = () => {
 
     setCanScrollLeft(slider.scrollLeft > 2);
     setCanScrollRight(
-      slider.scrollLeft + slider.clientWidth < slider.scrollWidth - 2
+      slider.scrollLeft + slider.clientWidth < slider.scrollWidth - 2,
     );
   };
 
@@ -171,7 +166,7 @@ const Blogs = () => {
   return (
     <section
       id="blog"
-      className="relative overflow-hidden bg-[#FAF8FF] py-20 text-zinc-950 sm:py-24"
+      className="relative overflow-hidden bg-[#FAF8FF] text-zinc-950"
     >
       {/* Background glow */}
       <div
@@ -180,22 +175,23 @@ const Blogs = () => {
         bg-[#c4b5fd]/10 blur-[120px]"
       />
 
-      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
+      <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-18">
         {/* Header */}
         <div className="flex flex-col gap-7 border-b border-zinc-950/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <span className="mb-4 block text-[16px] font-semibold uppercase text-[#17113d]">
+            <span className="block text-[16px] font-semibold uppercase text-[#17113d]">
               KNOWLEDGE BASE
             </span>
 
-            <h2 className="max-w-[700px] font-sora text-[32px] font-semibold leading-[1.12] tracking-[-0.045em] sm:text-[42px] lg:text-[68px] bg-gradient-to-r
+            <h2
+              className="mt-5 sm:mt-8 max-w-[700px] font-sora font-semibold leading-[1.08] tracking-[-0.03em] text-[clamp(1.5rem,4vw,3.50rem)] bg-gradient-to-r
 from-[#17113D]
 via-[#4e3aa8]
 to-[#4c3895]
 bg-clip-text
-text-transparent">
-              Ideas, Insights{" "}
-              <span className="">&</span>
+text-transparent"
+            >
+              Ideas, Insights <span className="">&</span>
               <br className="hidden sm:block" /> Digital Thinking
             </h2>
           </div>
@@ -219,72 +215,58 @@ text-transparent">
         </div>
 
         {/* Category filters + slider controls */}
-        <div className="mt-8 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-          <div
-            className="flex flex-wrap items-center gap-2"
-            aria-label="Filter blogs by category"
-          >
-            {categories.map((category) => {
-              const isActive = activeCategory === category;
+        {/*
+<div className="mt-8 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+  <div
+    className="flex flex-wrap items-center gap-2"
+    aria-label="Filter blogs by category"
+  >
+    {categories.map((category) => {
+      const isActive = activeCategory === category;
 
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setActiveCategory(category)}
-                  aria-pressed={isActive}
-                  className={`rounded-full w-auto border px-5 py-2.5 text-[12px]
-                    font-medium transition-all duration-300
-                    focus-visible:outline-none focus-visible:ring-2
-                    focus-visible:ring-[#3B1F5C] focus-visible:ring-offset-2
-                    ${
-                      isActive
-                        ? "border-[#3B1F5C] bg-[#3B1F5C] text-white shadow-[0_5px_20px_rgba(59,31,92,0.14)]"
-                        : "border-zinc-950/10 bg-white/50 text-zinc-700 hover:border-[#3B1F5C]/40 hover:bg-white"
-                    }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </div>
+      return (
+        <button
+          key={category}
+          type="button"
+          onClick={() => setActiveCategory(category)}
+          aria-pressed={isActive}
+          className={`rounded-full w-auto border px-5 py-2.5 text-[12px]
+            font-medium transition-all duration-300
+            focus-visible:outline-none focus-visible:ring-2
+            focus-visible:ring-[#3B1F5C] focus-visible:ring-offset-2
+            ${
+              isActive
+                ? "border-[#3B1F5C] bg-[#3B1F5C] text-white shadow-[0_5px_20px_rgba(59,31,92,0.14)]"
+                : "border-zinc-950/10 bg-white/50 text-zinc-700 hover:border-[#3B1F5C]/40 hover:bg-white"
+            }`}
+        >
+          {category}
+        </button>
+      );
+    })}
+  </div>
 
-          {/* Sliding arrows */}
-          <div className="flex items-center gap-3 self-end lg:self-auto">
+  <div className="flex items-center gap-3 self-end lg:self-auto">
+    <button
+      type="button"
+      onClick={() => scrollBlogs("left")}
+      disabled={!canScrollLeft}
+      aria-label="Scroll to previous blogs"
+    >
+      <ArrowIcon direction="left" />
+    </button>
 
-            <button
-              type="button"
-              onClick={() => scrollBlogs("left")}
-              disabled={!canScrollLeft}
-              aria-label="Scroll to previous blogs"
-              className="flex h-12 w-12 items-center justify-center rounded-full
-              border border-zinc-950/15 bg-white/60
-              transition-all duration-300 hover:border-[#3B1F5C]
-              hover:bg-[#3B1F5C] hover:text-white
-              disabled:cursor-not-allowed disabled:opacity-30
-              disabled:hover:border-zinc-950/15 disabled:hover:bg-white/60
-              disabled:hover:text-zinc-950"
-            >
-              <ArrowIcon direction="left" />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => scrollBlogs("right")}
-              disabled={!canScrollRight}
-              aria-label="Scroll to next blogs"
-              className="flex h-12 w-12 items-center justify-center rounded-full
-              border border-zinc-950/15 bg-white/60
-              transition-all duration-300 hover:border-[#3B1F5C]
-              hover:bg-[#3B1F5C] hover:text-white
-              disabled:cursor-not-allowed disabled:opacity-30
-              disabled:hover:border-zinc-950/15 disabled:hover:bg-white/60
-              disabled:hover:text-zinc-950"
-            >
-              <ArrowIcon direction="right" />
-            </button>
-          </div>
-        </div>
+    <button
+      type="button"
+      onClick={() => scrollBlogs("right")}
+      disabled={!canScrollRight}
+      aria-label="Scroll to next blogs"
+    >
+      <ArrowIcon direction="right" />
+    </button>
+  </div>
+</div>
+*/}
 
         {/* Blog slider */}
         <div
@@ -299,7 +281,7 @@ text-transparent">
               data-blog-card
               href={blog.href || "/blog"}
               className="group relative w-[88%] shrink-0 snap-start cursor-pointer
-              sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-21.34px)]"
+              sm:w-[calc(50%-46px)] lg:w-[calc(33.333%-41.34px)]"
             >
               {/* Image */}
               <div
@@ -309,7 +291,7 @@ text-transparent">
                 group-hover:-translate-y-2 group-hover:border-zinc-950/20
                 group-hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)]"
               >
-                <div className="relative aspect-[1.12/1] overflow-hidden">
+                <div className="relative aspect-[5/4] overflow-hidden">
                   <img
                     src={blog.image}
                     alt={blog.title}

@@ -22,15 +22,15 @@ import {
 
 const services = [
   {
-    title: "Brand and Creative",
-    description: "High-performance websites built to scale.",
-    href: "/services/brand-and-creative",
+    title: "Digital Marketing & Branding",
+    description: "Building strong brands and driving digital growth.",
+    href: "/services/digital-marketing-and-branding",
     icon: Code2,
   },
   {
     title: "UI/UX & Digital Experience",
     description: "Powerful mobile and cross-platform apps.",
-    href: "/services/ui-ux-digital-experience",
+    href: "/services/ui-ux-and-digital-experience",
     icon: Cpu,
   },
   {
@@ -63,36 +63,36 @@ const solutions = [
   {
     title: "CRM",
     description: "Customer relationship management",
-    href: "/solutions/crm",
+    href: "/solutions#crm",
   },
   {
     title: "ERP",
     description: "Connected business operations",
-    href: "/solutions/erp",
+    href: "/solutions#erp",
   },
   {
     title: "HRMS",
     description: "Simplified people management",
-    href: "/solutions/hrms",
+    href: "/solutions#hrms",
   },
   {
     title: "Custom Software",
     description: "Built around your business",
-    href: "/solutions/custom-software",
+    href: "/solutions#custom-software",
   },
   {
     title: "Analytics",
     description: "Turn data into decisions",
-    href: "/solutions/analytics",
+    href: "/solutions#analytics",
   },
 ];
 
 const navLinks = [
   { title: "Home", href: "/" },
-  { title: "About", href: "/about-us" },
+  { title: "About Us", href: "/about-us" },
   { title: "Work", href: "/work" },
-  { title: "Industries", href: "/industries" },
-  { title: "Insights", href: "/blog" },
+//   { title: "Industries", href: "/industries" },
+  { title: "Blogs", href: "/blog" },
   { title: "Contact Us", href: "/contact" },
   
 ];
